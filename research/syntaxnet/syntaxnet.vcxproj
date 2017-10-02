@@ -1,0 +1,713 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C8565981-3049-4CF2-A585-B4F9663DC595}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>syntaxnet</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;SYNTAXNET_EXPORTS;%(PreprocessorDefinitions);COMPILER_MSVC=1;_ITERATOR_DEBUG_LEVEL=0</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\third_party\googlemock\include;./;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\src;E:\projects\tensorflow-master;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\nsync\install\include;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\zlib\install\include;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\re2\install\include;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\eigen\src\eigen\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <UseUnicodeForAssemblerListing>true</UseUnicodeForAssemblerListing>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\dev_programs\anaconda3\envs\tensorflow\Lib\site-packages\tensorflow\python;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\re2\src\re2\RelWithDebInfo;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\nsync\src\nsync\RelWithDebInfo;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\RelWithDebInfo</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libprotobuf.lib;re2.lib;pywrap_tensorflow_internal.lib;nsync.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+      <ShowProgress>LinkVerbose</ShowProgress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;SYNTAXNET_EXPORTS;%(PreprocessorDefinitions);COMPILER_MSVC=1;_ITERATOR_DEBUG_LEVEL=0</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\third_party\googlemock\include;./;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\src;E:\projects\tensorflow-master;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\nsync\install\include;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\zlib\install\include;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\re2\install\include;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\eigen\src\eigen\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <UseUnicodeForAssemblerListing>true</UseUnicodeForAssemblerListing>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\dev_programs\anaconda3\envs\tensorflow\Lib\site-packages\tensorflow\python;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\re2\src\re2\RelWithDebInfo;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\nsync\src\nsync\RelWithDebInfo;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\RelWithDebInfo</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libprotobuf.lib;re2.lib;pywrap_tensorflow_internal.lib;nsync.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+      <ShowProgress>LinkVerbose</ShowProgress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;SYNTAXNET_EXPORTS;%(PreprocessorDefinitions);COMPILER_MSVC=1;_ITERATOR_DEBUG_LEVEL=0</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\third_party\googlemock\include;./;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\src;E:\projects\tensorflow-master;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\nsync\install\include;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\zlib\install\include;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\re2\install\include;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\eigen\src\eigen\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <UseUnicodeForAssemblerListing>true</UseUnicodeForAssemblerListing>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\dev_programs\anaconda3\envs\tensorflow\Lib\site-packages\tensorflow\python;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\re2\src\re2\RelWithDebInfo;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\nsync\src\nsync\RelWithDebInfo;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\RelWithDebInfo</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libprotobuf.lib;re2.lib;pywrap_tensorflow_internal.lib;nsync.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
+      <ShowProgress>LinkVerbose</ShowProgress>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;SYNTAXNET_EXPORTS;%(PreprocessorDefinitions);COMPILER_MSVC=1;_ITERATOR_DEBUG_LEVEL=0</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\third_party\googlemock\include;./;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\src;E:\projects\tensorflow-master;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\nsync\install\include;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\zlib\install\include;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\re2\install\include;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\eigen\src\eigen\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <UseUnicodeForAssemblerListing>true</UseUnicodeForAssemblerListing>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\dev_programs\anaconda3\envs\tensorflow\Lib\site-packages\tensorflow\python;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\re2\src\re2\RelWithDebInfo;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\nsync\src\nsync\RelWithDebInfo;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\RelWithDebInfo</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libprotobuf.lib;re2.lib;pywrap_tensorflow_internal.lib;nsync.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
+      <ShowProgress>LinkVerbose</ShowProgress>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="syntaxnet\affix.h" />
+    <ClInclude Include="syntaxnet\base.h" />
+    <ClInclude Include="syntaxnet\binary_segment_state.h" />
+    <ClInclude Include="syntaxnet\char_ngram_string_extractor.h" />
+    <ClInclude Include="syntaxnet\char_properties.h" />
+    <ClInclude Include="syntaxnet\char_shift_transitions.h" />
+    <ClInclude Include="syntaxnet\document_format.h" />
+    <ClInclude Include="syntaxnet\embedding_feature_extractor.h" />
+    <ClInclude Include="syntaxnet\feature_extractor.h" />
+    <ClInclude Include="syntaxnet\feature_types.h" />
+    <ClInclude Include="syntaxnet\fml_parser.h" />
+    <ClInclude Include="syntaxnet\head_transitions.h" />
+    <ClInclude Include="syntaxnet\label_transitions.h" />
+    <ClInclude Include="syntaxnet\morphology_label_set.h" />
+    <ClInclude Include="syntaxnet\parser_features.h" />
+    <ClInclude Include="syntaxnet\parser_state.h" />
+    <ClInclude Include="syntaxnet\parser_transitions.h" />
+    <ClInclude Include="syntaxnet\populate_test_inputs.h" />
+    <ClInclude Include="syntaxnet\proto_io.h" />
+    <ClInclude Include="syntaxnet\registry.h" />
+    <ClInclude Include="syntaxnet\segmenter_utils.h" />
+    <ClInclude Include="syntaxnet\sentence_batch.h" />
+    <ClInclude Include="syntaxnet\sentence_features.h" />
+    <ClInclude Include="syntaxnet\shared_store.h" />
+    <ClInclude Include="syntaxnet\stdafx.h" />
+    <ClInclude Include="syntaxnet\targetver.h" />
+    <ClInclude Include="syntaxnet\task_context.h" />
+    <ClInclude Include="syntaxnet\term_frequency_map.h" />
+    <ClInclude Include="syntaxnet\utils.h" />
+    <ClInclude Include="syntaxnet\whole_sentence_features.h" />
+    <ClInclude Include="syntaxnet\workspace.h" />
+    <ClInclude Include="third_party\utf\utf.h" />
+    <ClInclude Include="third_party\utf\utfdef.h" />
+    <ClInclude Include="util\utf8\unicodetext.h" />
+    <ClInclude Include="util\utf8\unilib.h" />
+    <ClInclude Include="util\utf8\unilib_utf8_utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="syntaxnet\affix.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\arc_standard_transitions.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\arc_standard_transitions_test.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\beam_reader_ops.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\binary_segment_state.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\binary_segment_state_test.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\binary_segment_transitions.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\binary_segment_transitions_test.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\char_ngram_string_extractor.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\char_ngram_string_extractor_test.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\char_properties.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\char_properties_test.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\char_shift_transitions.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\char_shift_transitions_test.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\dictionary.pb.cc" />
+    <ClCompile Include="syntaxnet\dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\document_filters.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\document_format.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\embedding_feature_extractor.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\feature_extractor.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\feature_extractor.pb.cc" />
+    <ClCompile Include="syntaxnet\fml_parser.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\head_transitions.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\head_transitions_test.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\label_transitions.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\label_transitions_test.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\lexicon_builder.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\morpher_transitions.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\morphology_label_set.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\morphology_label_set_test.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\once_transitions.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\once_transitions_test.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\parser_features.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\parser_features_test.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\parser_state.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\parser_transitions.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\populate_test_inputs.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\reader_ops.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\registry.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\segmenter_utils.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\segmenter_utils_test.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\sentence.pb.cc" />
+    <ClCompile Include="syntaxnet\sentence_batch.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\sentence_features.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\sentence_features_test.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\shared_store.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\shared_store_test.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\shift_transitions.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\sparse.pb.cc" />
+    <ClCompile Include="syntaxnet\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\syntaxnet.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\tagger_transitions.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\tagger_transitions_test.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\task_context.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\task_spec.pb.cc">
+      <StringPooling Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</StringPooling>
+      <StringPooling Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</StringPooling>
+      <StringPooling Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</StringPooling>
+      <StringPooling Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</StringPooling>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\term_frequency_map.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\test_main.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\text_formats.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\unpack_sparse_features.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\utils.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\whole_sentence_features.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\whole_sentence_features_test.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="syntaxnet\workspace.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="third_party\utf\rune.c" />
+    <ClCompile Include="third_party\utf\runestrcat.c" />
+    <ClCompile Include="third_party\utf\runestrchr.c" />
+    <ClCompile Include="third_party\utf\runestrcmp.c" />
+    <ClCompile Include="third_party\utf\runestrcpy.c" />
+    <ClCompile Include="third_party\utf\runestrdup.c" />
+    <ClCompile Include="third_party\utf\runestrecpy.c" />
+    <ClCompile Include="third_party\utf\runestrlen.c" />
+    <ClCompile Include="third_party\utf\runestrncat.c" />
+    <ClCompile Include="third_party\utf\runestrncmp.c" />
+    <ClCompile Include="third_party\utf\runestrncpy.c" />
+    <ClCompile Include="third_party\utf\runestrrchr.c" />
+    <ClCompile Include="third_party\utf\runestrstr.c" />
+    <ClCompile Include="third_party\utf\runetype.c" />
+    <ClCompile Include="third_party\utf\runetypebody.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="third_party\utf\utfecpy.c" />
+    <ClCompile Include="third_party\utf\utflen.c" />
+    <ClCompile Include="third_party\utf\utfnlen.c" />
+    <ClCompile Include="third_party\utf\utfrrune.c" />
+    <ClCompile Include="third_party\utf\utfrune.c" />
+    <ClCompile Include="third_party\utf\utfutf.c" />
+    <ClCompile Include="util\utf8\gtest_main.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="util\utf8\unicodetext.cc" />
+    <ClCompile Include="util\utf8\unicodetext_main.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="util\utf8\unicodetext_unittest.cc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="util\utf8\unilib.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="syntaxnet\beam_reader_ops_test.py" />
+    <None Include="syntaxnet\BUILD" />
+    <None Include="syntaxnet\conll2tree.py" />
+    <None Include="syntaxnet\context.pbtxt" />
+    <None Include="syntaxnet\demo.sh" />
+    <CustomBuild Include="syntaxnet\dictionary.proto">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compile protobuf file %(FullPath)</Message>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compile protobuf file %(FullPath)</Message>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).pb.cc;%(Filename).pb.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).pb.cc;%(Filename).pb.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+    </CustomBuild>
+    <CustomBuild Include="syntaxnet\feature_extractor.proto">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compile protobuf file %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).pb.cc;%(Filename).pb.h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compile protobuf file %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).pb.cc;%(Filename).pb.h;%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+    </CustomBuild>
+    <None Include="syntaxnet\graph_builder.py" />
+    <None Include="syntaxnet\graph_builder_test.py" />
+    <CustomBuild Include="syntaxnet\kbest_syntax.proto">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+    </CustomBuild>
+    <None Include="syntaxnet\lexicon_builder_test.py" />
+    <None Include="syntaxnet\load_parser_ops.py" />
+    <None Include="syntaxnet\parser_eval.py" />
+    <None Include="syntaxnet\parser_trainer.py" />
+    <None Include="syntaxnet\parser_trainer_test.sh" />
+    <None Include="syntaxnet\reader_ops_test.py" />
+    <CustomBuild Include="syntaxnet\sentence.proto">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compile protobuf file %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).pb.cc;%(Filename).pb.h;%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compile protobuf file %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).pb.cc;%(Filename).pb.h;%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+    </CustomBuild>
+    <CustomBuild Include="syntaxnet\sparse.proto">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compile protobuf file %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).pb.cc;%(Filename).pb.h;%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compile protobuf file %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).pb.cc;%(Filename).pb.h;%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+    </CustomBuild>
+    <None Include="syntaxnet\structured_graph_builder.py" />
+    <None Include="syntaxnet\syntaxnet.bzl" />
+    <None Include="syntaxnet\syntaxnet_ops.py" />
+    <CustomBuild Include="syntaxnet\task_spec.proto">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compile protobuf file %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).pb.cc;%(Filename).pb.h;%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compile protobuf file %(FullPath)</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).pb.cc;%(Filename).pb.h;%(Outputs)</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">set PATH=%PATH%;E:\projects\tensorflow-master\tensorflow\contrib\cmake\build\protobuf\src\protobuf\RelWithDebInfo
+protoc -I=%(RootDir)%(Directory) --cpp_out=%(RootDir)%(Directory) %(FullPath)</Command>
+    </CustomBuild>
+    <None Include="syntaxnet\text_formats_test.py" />
+    <None Include="third_party\utf\BUILD" />
+    <None Include="third_party\utf\README" />
+    <None Include="util\utf8\BUILD" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
